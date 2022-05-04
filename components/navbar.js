@@ -77,7 +77,7 @@ const Navbar = (props) => {
             href="https://github.com/jordicapedo/jordidev-homepage"
             isExternal={true}
           >
-            Source
+            Ssource
           </LinkItem>
         </Stack>
         <Box flex={1} align="right">
@@ -87,7 +87,7 @@ const Navbar = (props) => {
               <MenuButton
                 as={IconButton}
                 icon={<HamburgerIcon />}
-                variant="outline"
+                variant="ghost"
                 aria-label="Options"
               />
               <MenuList>
