@@ -77,7 +77,7 @@ const Navbar = (props) => {
             href="https://github.com/jordicapedo/jordidev-homepage"
             isExternal={true}
           >
-            Ssource
+            Source
           </LinkItem>
         </Stack>
         <Box flex={1} align="right">
