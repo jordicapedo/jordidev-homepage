@@ -103,7 +103,7 @@ const Page = () => {
         <Paragraph>
           Music, design, technology, art and everything in between. I love too
           much animals and special my cat and this is what I become vegan 2
-          years ago. I love to be in the nature too.
+          years ago.
         </Paragraph>
       </Section>
     </Container>
