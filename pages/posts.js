@@ -14,10 +14,9 @@ const Posts = () => {
             Coming soon...
           </Heading>
           <Paragraph>
-            I&apos;m working on a new blog, but it&apos;s not ready yet. Here
-            you can will see my posts. I&apos;ll be adding posts from all what I
-            do in my life: vegan recipes, books that I liked, rutines,
-            workouts... Stay tuned!
+            I&apos;m working on a new blog, but it&apos;s not ready yet.
+            I&apos;ll be adding posts from all what I do in my life: vegan
+            recipes, books that I liked, rutines, workouts... Stay tuned!
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/">
