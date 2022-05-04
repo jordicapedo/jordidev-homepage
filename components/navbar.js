@@ -14,18 +14,20 @@ import {
   IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
-import { HamburgerIcon, GithubIcon } from '@chakra-ui/icons'
+import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, path, children, isExternal = false }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
   return (
-    <NextLink href={href}>
+    <NextLink href={href} passHref>
       <Link
         p={2}
         bg={active ? 'glassTeal' : undefined}
         color={active ? '#202023' : inactiveColor}
+        borderRadius={4}
+        isExternal={isExternal}
       >
         {children}
       </Link>
@@ -71,6 +73,12 @@ const Navbar = (props) => {
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
+          <LinkItem
+            href="https://github.com/jordicapedo/jordidev-homepage"
+            isExternal={true}
+          >
+            Source
+          </LinkItem>
         </Stack>
         <Box flex={1} align="right">
           <ThemeToggleButton />
@@ -84,7 +92,7 @@ const Navbar = (props) => {
               />
               <MenuList>
                 <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>Home</MenuItem>
                 </NextLink>
                 <NextLink href="/works" passHref>
                   <MenuItem as={Link}>Works</MenuItem>
@@ -92,11 +100,11 @@ const Navbar = (props) => {
                 <NextLink href="/posts" passHref>
                   <MenuItem as={Link}>Posts</MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem
-                    as={Link}
-                    href="https://github.com/jordicapedo/jordidev-homepage"
-                  >
+                <NextLink
+                  href="https://github.com/jordicapedo/jordidev-homepage"
+                  passHref
+                >
+                  <MenuItem isExternal={true} as={Link}>
                     View Source
                   </MenuItem>
                 </NextLink>
