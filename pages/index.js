@@ -134,7 +134,10 @@ const Page = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://linkedin/jordicapelladesedo" target="_blank">
+              <Link
+                href="https://linkedin.com/in/jordicapelladesedo"
+                target="_blank"
+              >
                 <Button
                   variant="ghost"
                   colorScheme="teal"
@@ -145,7 +148,7 @@ const Page = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="" target="_blank">
+              <Link href="https://github.com/jordicapedo" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
@@ -156,7 +159,7 @@ const Page = () => {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="" target="_blank">
+              <Link href="mailto:jordicapelladesedo@gmail.com" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
