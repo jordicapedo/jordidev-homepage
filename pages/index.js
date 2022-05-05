@@ -4,6 +4,9 @@ import {
   Heading,
   Image,
   Button,
+  Link,
+  List,
+  ListItem,
   useColorModeValue
 } from '@chakra-ui/react'
 import Section from '../components/section'
@@ -12,6 +15,13 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
+import {
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoLogoGithub,
+  IoMailOutline
+} from 'react-icons/io5'
 
 const Page = () => {
   return (
@@ -32,7 +42,7 @@ const Page = () => {
             <Heading as="h2" variant="page-title">
               Jordi Capellades
             </Heading>
-            <p>Digital Craftzman ( Artist / Developer / Designer ) </p>
+            <p>( Artist / Developer / Designer ) </p>
           </Box>
           <Box
             flexShrink={0}
@@ -44,7 +54,7 @@ const Page = () => {
               borderColor="whiteAlpha.800"
               borderWidth={2}
               borderStyle="solid"
-              maxWidth="190px"
+              maxWidth="150px"
               display="inline-block"
               borderRadius="full"
               src="/images/jordi.jpeg"
@@ -107,6 +117,57 @@ const Page = () => {
             much animals and special my cat and this is what I become vegan 2
             years ago.
           </Paragraph>
+        </Section>
+        <Section delay={0.4}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://instagram.com/jordicapedo" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoInstagram />}
+                >
+                  @jordicapedo
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://linkedin/jordicapelladesedo" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoLinkedin />}
+                >
+                  /in/jordicapelladesedo
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoGithub />}
+                >
+                  /jordicapedo
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoMailOutline />}
+                >
+                  jordicapelladesedo@gmail.com
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </Layout>

@@ -16,8 +16,9 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
+import { IoLogoGithub } from 'react-icons/io5'
 
-const LinkItem = ({ href, path, children, isExternal = false }) => {
+const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
   return (
@@ -27,7 +28,8 @@ const LinkItem = ({ href, path, children, isExternal = false }) => {
         bg={active ? 'glassTeal' : undefined}
         color={active ? '#202023' : inactiveColor}
         borderRadius={4}
-        isExternal={isExternal}
+        target={target}
+        {...props}
       >
         {children}
       </Link>
@@ -74,9 +76,14 @@ const Navbar = (props) => {
             Posts
           </LinkItem>
           <LinkItem
+            target="_blank"
             href="https://github.com/jordicapedo/jordidev-homepage"
-            isExternal={true}
+            display="flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
           >
+            <IoLogoGithub />
             Source
           </LinkItem>
         </Stack>
