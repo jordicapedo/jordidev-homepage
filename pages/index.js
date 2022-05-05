@@ -16,7 +16,6 @@ import NextLink from 'next/link'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import {
-  IoLogoTwitter,
   IoLogoInstagram,
   IoLogoLinkedin,
   IoLogoGithub,
@@ -54,7 +53,7 @@ const Page = () => {
               borderColor="whiteAlpha.800"
               borderWidth={2}
               borderStyle="solid"
-              maxWidth="150px"
+              maxWidth="190px"
               display="inline-block"
               borderRadius="full"
               src="/images/jordi.jpeg"

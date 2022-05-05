@@ -12,8 +12,8 @@ const Website = ({ Component, pageProps, router }) => {
       <Layout router={router}>
         <AnimatePresence exitBeforeEnter initial={true}>
           <Component {...pageProps} key={router.route} />
+          <Footer />
         </AnimatePresence>
-        <Footer />
       </Layout>
     </ChakraProvider>
   )

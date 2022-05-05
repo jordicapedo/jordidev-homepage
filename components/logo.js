@@ -35,7 +35,7 @@ const Logo = () => {
             fontWeight="bold"
             ml={3}
           >
-            Jordi
+            Jordi Capellades
           </Text>
         </LogoBox>
       </a>
