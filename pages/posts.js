@@ -21,7 +21,7 @@ const Posts = () => {
           <Box align="center" my={4}>
             <NextLink href="/">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="cyan">
-                Back to home
+                Return to home
               </Button>
             </NextLink>
           </Box>
