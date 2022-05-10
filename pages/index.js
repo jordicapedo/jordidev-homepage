@@ -25,17 +25,7 @@ import {
 const Page = () => {
   return (
     <Layout>
-      <Container>
-        <Box
-          borderRadius="lg"
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-          mb={6}
-          p="3"
-          align="center"
-        >
-          Hello, I&apos;m a web developer based in Barcelona!
-        </Box>
-
+      <Container mt={12}>
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1}>
             <Heading as="h2" variant="page-title">
@@ -47,6 +37,7 @@ const Page = () => {
             flexShrink={0}
             mt={{ base: 4, md: 0 }}
             ml={{ md: 6 }}
+            mb={{ base: 4 }}
             align="center"
           >
             <Image
@@ -61,6 +52,15 @@ const Page = () => {
             />
           </Box>
         </Box>
+        <Box
+          borderRadius="lg"
+          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          mb={6}
+          p="3"
+          align="center"
+        >
+          Hello, I&apos;m a web developer based in Barcelona!
+        </Box>
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
             Work
@@ -74,9 +74,9 @@ const Page = () => {
             calisthenics or listing/making music.
           </Paragraph>
           <Box align="center" my={4}>
-            <NextLink href="/works">
+            <NextLink href="/projects">
               <Button rightIcon={<ChevronRightIcon />} colorScheme="cyan">
-                Works
+                Projects
               </Button>
             </NextLink>
           </Box>
