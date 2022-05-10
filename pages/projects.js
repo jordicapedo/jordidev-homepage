@@ -15,7 +15,6 @@ const Works = () => {
           <SimpleGrid columns={[1, 1, 2]} gap={6}>
             <Section>
               <WorkGridItem
-                id="pokemones"
                 title="Pokemones"
                 url="https://pokemonesdex.vercel.app/"
                 thumbnail={thumbPokemones}
