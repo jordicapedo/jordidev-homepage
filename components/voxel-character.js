@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
-import { DogSpinner, DogContainer } from './voxel-dog-loader'
+import { DogSpinner, DogContainer } from './voxel-character-loader'
 
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
@@ -13,12 +13,12 @@ const VoxelDog = () => {
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
   const [_camera, setCamera] = useState()
-  const [target] = useState(new THREE.Vector3(-5, 1.2, 0))
+  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      40 * Math.sin(0.2 * Math.PI),
+      20 * Math.sin(0.2 * Math.PI),
       10,
-      40 * Math.cos(0.2 * Math.PI)
+      20 * Math.cos(0.2 * Math.PI)
     )
   )
   const [scene] = useState(new THREE.Scene())
@@ -51,7 +51,7 @@ const VoxelDog = () => {
       container.appendChild(renderer.domElement)
       setRenderer(renderer)
 
-      const scale = scH * 0.005 + 40.8
+      const scale = scH * 0.005 + 2.8
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -72,7 +72,7 @@ const VoxelDog = () => {
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, '/me.glb', {
+      loadGLTFModel(scene, '/character.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
