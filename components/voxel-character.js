@@ -48,8 +48,16 @@ const VoxelDog = () => {
       renderer.setPixelRatio(window.devicePixelRatio)
       renderer.setSize(scW, scH)
       renderer.outputEncoding = THREE.sRGBEncoding
+      renderer.shadowMap.enabled = true
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap
       container.appendChild(renderer.domElement)
       setRenderer(renderer)
+
+      //Create a PointLight and turn on shadows for the light
+      const light = new THREE.PointLight(0xffffff, 1, 100)
+      light.position.set(0, 10, 4)
+      light.castShadow = true // default false
+      scene.add(light)
 
       const scale = scH * 0.005 + 2.8
       const camera = new THREE.OrthographicCamera(
@@ -66,6 +74,9 @@ const VoxelDog = () => {
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
       scene.add(ambientLight)
+
+      const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5)
+      scene.add(directionalLight)
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
