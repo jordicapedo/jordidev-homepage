@@ -1,6 +1,13 @@
 import Head from 'next/head'
 import { Box, Container } from '@chakra-ui/react'
 import Navbar from '../navbar'
+import VoxelDogLoader from '../voxel-dog-loader'
+import dynamic from 'next/dynamic'
+
+const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
+  ssr: false,
+  loading: () => <VoxelDogLoader />
+})
 
 const Main = ({ children, router }) => {
   return (
@@ -9,9 +16,12 @@ const Main = ({ children, router }) => {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <title>Jordi Capellades - Homepage</title>
       </Head>
+
       <Navbar path={router.asPath} />
-      <Box align="center" pt={24}></Box>
-      <Container maxW="container.md">{children}</Container>
+      <Container maxW="container.md">
+        <LazyVoxelDog />
+        {children}
+      </Container>
     </Box>
   )
 }
