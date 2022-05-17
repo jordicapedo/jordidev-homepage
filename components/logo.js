@@ -22,21 +22,12 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+  const footPrintImg = `/images/logo${useColorModeValue('', '-dark')}.png`
   return (
     <Link href="/">
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={30} height={30} alt="logo" />
-
-          <Text
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily="M PLUS Rounded 1c, sans-serif"
-            fontWeight="bold"
-            ml={3}
-          >
-            Jordi Capellades
-          </Text>
+          <Image src={footPrintImg} width={40} height={40} alt="logo" />
         </LogoBox>
       </a>
     </Link>
