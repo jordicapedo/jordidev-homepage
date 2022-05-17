@@ -74,7 +74,7 @@ const Navbar = (props) => {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/craftzdog/craftzdog-homepage"
+            href="https://github.com/jordicapedo/jordidev-homepage"
             display="flex"
             alignItems="center"
             style={{ gap: 4 }}
