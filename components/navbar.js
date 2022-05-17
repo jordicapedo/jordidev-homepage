@@ -41,7 +41,7 @@ const Navbar = (props) => {
   const { path } = props
   return (
     <Box
-      position="sticky"
+      position="fixed"
       as="nav"
       w="100%"
       bg={useColorModeValue('#fffffff40', '#20202380')}
@@ -107,6 +107,11 @@ const Navbar = (props) => {
                 >
                   <MenuItem isExternal={true} as={Link}>
                     View Source
+                  </MenuItem>
+                </NextLink>
+                <NextLink href="https://www.craftz.dog/" passHref>
+                  <MenuItem isExternal={true} as={Link}>
+                    Takuya&rsquo;s homepage
                   </MenuItem>
                 </NextLink>
               </MenuList>
