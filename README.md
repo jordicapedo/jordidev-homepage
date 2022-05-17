@@ -1,4 +1,4 @@
-# Takuya's Homepage
+# Jordi's Homepage
 
 [https://jordidev-homepage.vercel.app/](https://jordidev-homepage.vercel.app/)
 
