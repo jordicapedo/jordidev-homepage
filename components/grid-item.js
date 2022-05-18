@@ -21,7 +21,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 )
 
 export const WorkGridItem = ({ children, title, url, thumbnail }) => (
-  <Box w="100%" textAlign="center">
+  <Box w="100%" textAlign="center" className="project-section">
     <LinkBox cursor="pointer" target="_blank">
       <Image
         src={thumbnail}
@@ -43,8 +43,15 @@ export const GridItemStyle = () => (
   <Global
     styles={`
       .grid-item-thumbnail {
-        border-radius: 12px;
-      }      
+        border-radius: 12px;        
+      }   
+      
+      .project-section {
+        transition: all 0.3s ease-in-out;        
+        &:hover {          
+          transform: translateY(-4px);
+        }
+      }
     `}
   />
 )
