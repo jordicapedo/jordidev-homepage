@@ -7,7 +7,8 @@ import {
   Link,
   List,
   ListItem,
-  useColorModeValue
+  useColorModeValue,
+  Grid
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
@@ -15,6 +16,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
+import Skill from '../components/skill'
 import {
   IoLogoInstagram,
   IoLogoLinkedin,
@@ -118,6 +120,21 @@ const Page = () => {
           </Paragraph>
         </Section>
         <Section delay={0.4}>
+          <Heading as="h3" variant="section-title">
+            Skills
+          </Heading>
+          <Grid templateColumns="repeat(5, 1fr)" gap={2}>
+            <Skill color="red">React</Skill>
+            <Skill color="orange">Next</Skill>
+            <Skill color="yellow">JS</Skill>
+            <Skill color="green">PHP</Skill>
+            <Skill color="teal">CSS</Skill>
+            <Skill color="blue">HTML</Skill>
+            <Skill color="purple">GIT</Skill>
+            <Skill color="pink">SCRUM</Skill>
+          </Grid>
+        </Section>
+        <Section delay={0.5}>
           <Heading as="h3" variant="section-title">
             On the web
           </Heading>
