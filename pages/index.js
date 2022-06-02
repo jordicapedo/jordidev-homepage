@@ -128,6 +128,7 @@ const Page = () => {
             <Skill color="orange">Next</Skill>
             <Skill color="yellow">JS</Skill>
             <Skill color="green">PHP</Skill>
+            <Skill color="orange">Node</Skill>
             <Skill color="teal">CSS</Skill>
             <Skill color="blue">HTML</Skill>
             <Skill color="purple">GIT</Skill>
