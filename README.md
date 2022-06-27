@@ -1,6 +1,6 @@
 # Jordi's Homepage
 
-[https://jordidev-homepage.vercel.app/](https://jordidev-homepage.vercel.app/)
+[https://jordicapellades.dev/](https://jordicapellades.dev/)
 
 ## Tutorial by Takuya Matsuyama
 
